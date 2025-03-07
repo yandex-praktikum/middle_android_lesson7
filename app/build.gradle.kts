@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "yandex.practicum.middle.android.media"
+        applicationId = "yandex.practicum.middle.android.media.lesson"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
