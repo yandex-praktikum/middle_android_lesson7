@@ -77,7 +77,8 @@ private fun setupAudioFocus(context: Context, player: Player) {
 
     player.addListener(object : Listener {
         override fun onPlaybackStateChanged(playbackState: Int) {
-            audioManager.abandonAudioFocusRequest(focusRequest)
+            if (playbackState == Player.STATE_ENDED)
+                audioManager.abandonAudioFocusRequest(focusRequest)
         }
     })
     audioManager.requestAudioFocus(focusRequest)
